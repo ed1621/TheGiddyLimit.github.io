@@ -1209,6 +1209,32 @@
 			]
 		},
 		{
+			"name": "River King",
+			"lairActions": [
+				"On initiative count 20 (losing initiative ties), the River King takes a lair action to cause one of the following effects; the River King can't use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"The fey river swells and rushes over the land, or the walls of the Hall buckle and allow the torrent in. The River King chooses a 10-foot-wide path up to 60 feet long. Each creature in the path of the water must make a DC 15 Strength saving throw. Creatures that fail the save are swept 20 feet down the path of the water and take 9 (2d8) bludgeoning damage.",
+						"The River King targets a creature he can see within 60 feet. That creature's mouth and throat fill with river water. The creature must make a DC 15 Constitution saving throw. On a success, the creature manages to hold its breath, but on a failure, it begins to suffocate. A suffocating but conscious creature repeats the saving throw at the end of its turn, ending the effect on itself on a success. Another creature within 5 feet can use an action to make a DC 15 Wisdom (Medicine) check. On a success, the suffocating creature coughs up the water and the effect ends. Otherwise the effect lasts until the River King uses this action again or dies.",
+						"The River King targets a creature he can see within 120 feet. His commanding presence overwhelms the creature, who must make a DC 15 Charisma saving throw. On a failure, the creature is charmed by the River King until initiative count 20 on the following round."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing the River King's lair is warped by its magic, which creates one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"The current of rivers and streams within 6 miles of the lair becomes strong and erratic. Creatures without a swim speed who start their turns in running water must succeed on a DC 15 Strength (Athletics) check or be swept 60 feet downriver.",
+						"Lakes, ponds, rivers, and streams within 6 miles of the lair teem with fish and other wildlife",
+						"Rain and thunderstorms are common within 6 miles of the lair, and often build to torrential downpours that create heavy obscurement and cause waterways to overflow their banks"
+					]
+				},
+				"If the River King dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days."
+			]
+		},
+		{
 			"name": "Sapphire Dragon",
 			"lairActions": [
 				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
@@ -1282,6 +1308,32 @@
 					]
 				},
 				"If the dragon dies, changed weather reverts to normal, as described in the spell, and the other effects fade in 1d10 days."
+			]
+		},
+		{
+			"name": "Snow Queen",
+			"lairActions": [
+				"On initiative count 20 (losing initiative ties), the Snow Queen takes a lair action to cause one of the following effects; the Snow Queen can't use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"A wall of dense snow springs into existence within 120 feet of the Snow Queen. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in the wall's area must make a DC 15 Dexterity saving throw. A creature that fails the saving throw takes 18 (4d8) cold damage and is pushed 5 feet out of the wall's space, on whichever side of the wall it chooses. A creature that touches the wall at any time takes the same damage. Each 10-foot section of the wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to cold, poison, and psychic damage. The wall lasts until the Snow Queen uses this action again, or she dies.",
+						"Icy wind and stinging snow swirls around the Snow Queen. All creatures that aren't immune to cold damage have disadvantage when making saving throws against cold damage or cold-based effects while within 60 feet of the Snow Queen. This effect lasts until initiative count 20 on the following round.",
+						"The snow and ice of the lair shimmer and gleam, catching the light and flashing it into the eyes of the Snow Queen's foes. Attack rolls against the Snow Queen and her allies within the lair have disadvantage until initiative count 20 on the following round."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing the Snow Queen's lair is warped by the fey lady's magic, which creates one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Within 10 miles of the lair, snow and ice resist melting. Snow and ice can be melted only with prolonged contact with fire",
+						"The sky is overcast most of the time within 10 miles of the lair, and snowfall is common. The area is difficult terrain for Tiny, Small, and Medium creatures because of deep snow",
+						"Light snowfall or swirling powder blown by the wind lightly obscures the area within 5 miles of the lair."
+					]
+				},
+				"If the Snow Queen dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days."
 			]
 		},
 		{

@@ -151,6 +151,32 @@
 			]
 		},
 		{
+			"name": "Bear King",
+			"lairActions": [
+				"On initiative count 20 (losing initiative ties), the Bear King takes a lair action to cause one of the following effects; the Bear King can’t use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"The Bear King magically conjures up a swarm of eight giant bees (use {@creature giant wasp} statistics) to defend his lair. The bees act immediately, and on initiative count 20 in subsequent rounds. The bees remain until they’re killed or until the Bear King dismisses them as an action. The Bear King can use this action again, but no more than eight giant bees can be present at a time.",
+						"The Bear King targets a creature within the lair that he can see. The creature must succeed on a DC 15 Constitution saving throw or be magically transformed into a brown bear as if by a {@spell polymorph} spell. At the beginning of its turn, a transformed creature repeats the saving throw. If it fails, the creature must use its action to attack one of the Bear King’s foes. If it succeeds, the effect ends and the creature returns to its normal form. The effect lasts until the creature succeeds on the saving throw or until the Bear King uses this lair action again",
+						"The Bear King causes the ground in a 20-foot radius to tremble and shake. Any creatures in the affected area must succeed on a DC 15 Strength saving throw or suffer 7 (2d6) bludgeoning damage and fall prone. The ground continues to tremble until initiative count 20 on the following round, during which time the area is difficult terrain."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region surrounding Gloaming Crag is warped by the Bear King’s magic, which creates one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Within 10 miles of the Bear King’s lair, creatures have disadvantage on saving throws made to avoid contractinglycanthropy from a werebear.",
+						"Bees within 10 miles of the Bear King’s lair are easily agitated and quick to attack. Insect swarms (bees or hornets) are common in the area, but they tend to ignore locals.",
+						"Emotions within 5 miles of the Bear King’s lair run high. Arguments quickly descend into physical scuffles and enjoyable get-togethers are likely to become raucous carousing or even brawls."
+					]
+				},
+				"If the Bear King dies, conditions in the area surrounding the lair return to normal over the course of 1d6 days"
+			]
+		},
+		{
 			"name": "Beholder",
 			"lairActions": [
 				"When fighting inside its lair, a beholder can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the beholder can take one lair action to cause one of the following effects:",
@@ -872,6 +898,32 @@
 			]
 		},
 		{
+			"name": "Lord of the Hunt",
+			"lairActions": [
+				"On initiative count 20 (losing initiative ties), the Lord of the Hunt takes a lair action to cause one of the following effects; the Lord of the Hunt can’t use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"The Lord of the Hunt chooses a point he can see within the lair. Plants erupt from the ground in a 20-foot radius surrounding that point, creating difficult terrain. Any creatures in the area at the start of their turn, or who enter the area for the first time on a turn, must make a successful DC 15 Dexterity saving throw or become restrained by the vines and take 13 (3d8) poison damage. A creature can be freed if it or an adjacent ally uses an action to make a successful DC 15 Strength check. This effect lasts until the Lord of the Hunt uses this lair action again, or dies.",
+						"The Lord of the Hunt lets out a war cry. A creature the Lord can see within 120 feet must succeed on a DC 15 Wisdom saving throw or be frightened for 1 minute. A frightened creature repeats the saving throw at the end of its turn, ending the effect on itself on a success",
+						"The Lord of the Hunt magically marks a target he can see within 120 feet. The Lord has advantage on attack rolls against the marked target. The mark lasts until initiative count 20 on the following turn."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing Lord of the Hunt’s encampment is warped by his magic, which creates one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Game animals become plentiful within 3 miles of the lair. Wisdom (Survival) checks to hunt for food are made with advantage, but patrols from the Wild Hunt don’t take kindly to poachers.",
+						"Domesticated animals within 3 miles of the lair become skittish and fearful. They are more difficult to handle and flee the area if left to their own devices",
+						"Areas of natural terrain within 3 miles of the lair subtly rearrange themselves to create game trails through even the densest wilderness."
+					]
+				},
+				"When the Lord of the Hunt breaks camp or dies, the area around the previous campsite returns to normal immediately."
+			]
+		},
+		{
 			"name": "Marlos Urnrayle",
 			"lairActions": [
 				"If Marlos is in the earth node while {@creature Ogrémoch|PotA} isn't, the medusa can take lair actions. On initiative count 20 (losing initiative ties), Marlos uses a lair action to cast {@spell earthquake} without using components. As long as he maintains concentration on {@spell earthquake}, initiative count 20 is the start of Marlos's turn for the purpose of the spell. He can take no other lair actions while concentrating on {@spell earthquake}.",
@@ -903,6 +955,32 @@
 					]
 				},
 				"If the dragon dies, plants regrow naturally over time, and craters remain. The other effects fade over the course of 1d10 days."
+			]
+		},
+		{
+			"name": "Moonlit King",
+			"lairActions": [
+				"On initiative count 20 (losing initiative ties), the Moonlit King takes a lair action to cause one of the following effects; the Moonlit King can’t use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"The Moonlit King creates four beams of moonlight at four points he can see within 100 feet. The beams each illuminate a 10-foot radius with dim light. These moon beams last until the Moonlit King uses this action again, or until he dies.",
+						"The Moonlit King chooses a point he can see within 100 feet. Disembodied whispers speaking of despair and failure fill a 30-foot radius from that point. All creatures other than fiends in the area must succeed on a DC 15 Wisdom saving throw or become frightened until initiative count 20 on the following round.",
+						"The Moonlit King magically summons four {@creature shadow demon|mm|shadow demons}. The demons appear in unoccupied spaces the Moonlit King can see within 60 feet. The demons act immediately and remain until initiative count 20 on the following round."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing the Moonlit King’s lair is warped by the fey lord’s magic, which creates one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Dreams and fears take on a life of their own. Minor visual and auditory hallucinations plague creatures within 6 miles of the lair.",
+						"The Moonlit King can communicate telepathically with and share the senses of any {@creature stryx} within 10 miles of his lair",
+						"Weather conditions don’t inhibit moonlight shining within 10 miles of the lair; clouds part, rain seems to channel moonbeams, snow takes on a luminous silver glow."
+					]
+				},
+				"If the Moonlit King dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days."
 			]
 		},
 		{

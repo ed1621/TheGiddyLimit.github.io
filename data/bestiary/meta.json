@@ -976,7 +976,7 @@
 					"type": "list",
 					"items": [
 						"Dreams and fears take on a life of their own. Minor visual and auditory hallucinations plague creatures within 6 miles of the lair.",
-						"The Moonlit King can communicate telepathically with and share the senses of any {@creature stryx} within 10 miles of his lair",
+						"The Moonlit King can communicate telepathically with and share the senses of any {@creature stryx|ToB 3pp} within 10 miles of his lair",
 						"Weather conditions don't inhibit moonlight shining within 10 miles of the lair; clouds part, rain seems to channel moonbeams, snow takes on a luminous silver glow."
 					]
 				},

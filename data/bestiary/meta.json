@@ -153,24 +153,24 @@
 		{
 			"name": "Bear King",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the Bear King takes a lair action to cause one of the following effects; the Bear King can’t use the same effect two rounds in a row:",
+				"On initiative count 20 (losing initiative ties), the Bear King takes a lair action to cause one of the following effects; the Bear King can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
-						"The Bear King magically conjures up a swarm of eight giant bees (use {@creature giant wasp} statistics) to defend his lair. The bees act immediately, and on initiative count 20 in subsequent rounds. The bees remain until they’re killed or until the Bear King dismisses them as an action. The Bear King can use this action again, but no more than eight giant bees can be present at a time.",
-						"The Bear King targets a creature within the lair that he can see. The creature must succeed on a DC 15 Constitution saving throw or be magically transformed into a brown bear as if by a {@spell polymorph} spell. At the beginning of its turn, a transformed creature repeats the saving throw. If it fails, the creature must use its action to attack one of the Bear King’s foes. If it succeeds, the effect ends and the creature returns to its normal form. The effect lasts until the creature succeeds on the saving throw or until the Bear King uses this lair action again",
+						"The Bear King magically conjures up a swarm of eight giant bees (use {@creature giant wasp} statistics) to defend his lair. The bees act immediately, and on initiative count 20 in subsequent rounds. The bees remain until they're killed or until the Bear King dismisses them as an action. The Bear King can use this action again, but no more than eight giant bees can be present at a time.",
+						"The Bear King targets a creature within the lair that he can see. The creature must succeed on a DC 15 Constitution saving throw or be magically transformed into a brown bear as if by a {@spell polymorph} spell. At the beginning of its turn, a transformed creature repeats the saving throw. If it fails, the creature must use its action to attack one of the Bear King's foes. If it succeeds, the effect ends and the creature returns to its normal form. The effect lasts until the creature succeeds on the saving throw or until the Bear King uses this lair action again",
 						"The Bear King causes the ground in a 20-foot radius to tremble and shake. Any creatures in the affected area must succeed on a DC 15 Strength saving throw or suffer 7 (2d6) bludgeoning damage and fall prone. The ground continues to tremble until initiative count 20 on the following round, during which time the area is difficult terrain."
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region surrounding Gloaming Crag is warped by the Bear King’s magic, which creates one or more of the following effects:",
+				"The region surrounding Gloaming Crag is warped by the Bear King's magic, which creates one or more of the following effects:",
 				{
 					"type": "list",
 					"items": [
-						"Within 10 miles of the Bear King’s lair, creatures have disadvantage on saving throws made to avoid contractinglycanthropy from a werebear.",
-						"Bees within 10 miles of the Bear King’s lair are easily agitated and quick to attack. Insect swarms (bees or hornets) are common in the area, but they tend to ignore locals.",
-						"Emotions within 5 miles of the Bear King’s lair run high. Arguments quickly descend into physical scuffles and enjoyable get-togethers are likely to become raucous carousing or even brawls."
+						"Within 10 miles of the Bear King's lair, creatures have disadvantage on saving throws made to avoid contractinglycanthropy from a werebear.",
+						"Bees within 10 miles of the Bear King's lair are easily agitated and quick to attack. Insect swarms (bees or hornets) are common in the area, but they tend to ignore locals.",
+						"Emotions within 5 miles of the Bear King's lair run high. Arguments quickly descend into physical scuffles and enjoyable get-togethers are likely to become raucous carousing or even brawls."
 					]
 				},
 				"If the Bear King dies, conditions in the area surrounding the lair return to normal over the course of 1d6 days"
@@ -900,7 +900,7 @@
 		{
 			"name": "Lord of the Hunt",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the Lord of the Hunt takes a lair action to cause one of the following effects; the Lord of the Hunt can’t use the same effect two rounds in a row:",
+				"On initiative count 20 (losing initiative ties), the Lord of the Hunt takes a lair action to cause one of the following effects; the Lord of the Hunt can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -911,11 +911,11 @@
 				}
 			],
 			"regionalEffects": [
-				"The region containing Lord of the Hunt’s encampment is warped by his magic, which creates one or more of the following effects:",
+				"The region containing Lord of the Hunt's encampment is warped by his magic, which creates one or more of the following effects:",
 				{
 					"type": "list",
 					"items": [
-						"Game animals become plentiful within 3 miles of the lair. Wisdom (Survival) checks to hunt for food are made with advantage, but patrols from the Wild Hunt don’t take kindly to poachers.",
+						"Game animals become plentiful within 3 miles of the lair. Wisdom (Survival) checks to hunt for food are made with advantage, but patrols from the Wild Hunt don't take kindly to poachers.",
 						"Domesticated animals within 3 miles of the lair become skittish and fearful. They are more difficult to handle and flee the area if left to their own devices",
 						"Areas of natural terrain within 3 miles of the lair subtly rearrange themselves to create game trails through even the densest wilderness."
 					]
@@ -960,7 +960,7 @@
 		{
 			"name": "Moonlit King",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the Moonlit King takes a lair action to cause one of the following effects; the Moonlit King can’t use the same effect two rounds in a row:",
+				"On initiative count 20 (losing initiative ties), the Moonlit King takes a lair action to cause one of the following effects; the Moonlit King can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -971,13 +971,13 @@
 				}
 			],
 			"regionalEffects": [
-				"The region containing the Moonlit King’s lair is warped by the fey lord’s magic, which creates one or more of the following effects:",
+				"The region containing the Moonlit King's lair is warped by the fey lord's magic, which creates one or more of the following effects:",
 				{
 					"type": "list",
 					"items": [
 						"Dreams and fears take on a life of their own. Minor visual and auditory hallucinations plague creatures within 6 miles of the lair.",
 						"The Moonlit King can communicate telepathically with and share the senses of any {@creature stryx} within 10 miles of his lair",
-						"Weather conditions don’t inhibit moonlight shining within 10 miles of the lair; clouds part, rain seems to channel moonbeams, snow takes on a luminous silver glow."
+						"Weather conditions don't inhibit moonlight shining within 10 miles of the lair; clouds part, rain seems to channel moonbeams, snow takes on a luminous silver glow."
 					]
 				},
 				"If the Moonlit King dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days."
@@ -1128,6 +1128,32 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Queen of Night and Magic",
+			"lairActions": [
+				"On initiative count 20 (losing initiative ties), the Queen of Night and Magic takes a lair action to cause one of the following effects; the Queen of Night and Magic can't use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"The Queen wills darkness to overpower the light. All bright light sources in the lair shed only dim light to their normal bright light radius, and dim light sources are extinguished. This lasts until the Queen dismisses the effect or dies.",
+						"An opaque wall of writhing shadows springs up from a solid surface within 120 feet of the Queen. The wall is up to 60 feet long, 10 feet high, and 5 feet thick. Each creature in the area must make a successful DC 15 Dexterity saving throw or take 18 (4d8) necrotic damage. Creatures in the wall's space are pushed 5 feet out of the wall's space, appearing on whichever side of the wall they choose. A creature can move through the wall, but the semimaterial shadow resists intrusion. For every foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, any creature that, during its own turn, occupies any part of the wall's space takes 18 (4d8) necrotic damage, or half damage with a successful DC 15 Constitution saving throw. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to radiant damage, resistance to bludgeoning and piercing damage, and immunity to cold, poison, and psychic damage. The wall lasts until the Queen uses this lair action again, or until she dies.",
+						"The Queen targets one creature within 60 feet of her and assails its mind with visions of hopelessness and despair. The creature must succeed on a DC 15 Wisdom saving throw or be stunned until initiative count 20 on the next round."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing the Queen of Night and Magic's lair is warped by her magic, which creates one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Shadows come to life within 6 miles of the Queen's lair. Most of the time these living shadows are unnerving and nothing more, but when a creature acts against the interests of the Queen, the shadows can interfere and cause any relevant die roll to be made with disadvantage.",
+						"Magic saturates the area within 6 miles of the lair, causing minor random effects similar to a {@spell prestidigitation} cantrip",
+						"The Queen of Night and Magic can cast her senses to any area containing darkness, dim light, or shadows within 6 miles of her lair, similar to a {@spell clairvoyance} spell."
+					]
+				},
+				"While the Summer Court rules, the regional effects of the Queen's lair extend into the Winter Palace, but they are diminished and weaker than normal. During the Winter Court's reign, the Winter Palace is not subject to the regional effects. If the Queen of Night and Magic dies, conditions in the area surrounding the lair gradually return to normal over the course of 2d10 days."
 			]
 		},
 		{

@@ -9863,7 +9863,7 @@
 				"survival": "+4"
 			},
 			"senses": "darkvision 60 ft.",
-			"passive": 13,
+			"passive": 14,
 			"languages": "Tlincalli",
 			"cr": "5",
 			"action": [
@@ -11493,7 +11493,7 @@
 			},
 			"source": "VGM",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": "16 (natural armor)",
@@ -11638,7 +11638,7 @@
 			},
 			"source": "VGM",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": "14 (natural armor)",
@@ -11733,7 +11733,7 @@
 			},
 			"source": "VGM",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": "14 (natural armor)",
@@ -11887,7 +11887,7 @@
 			},
 			"source": "VGM",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": "14 (natural armor)",
@@ -12041,7 +12041,7 @@
 			},
 			"source": "VGM",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": "14 (natural armor)",

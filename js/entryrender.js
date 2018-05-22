@@ -562,7 +562,7 @@ function EntryRenderer () {
 				if (s.charAt(0) === "@") {
 					const [tag, text] = EntryRenderer.splitFirstSpace(s);
 
-					if (tag === "@bold" || tag === "@b" || tag === "@italic" || tag === "@i" || tag === "@skill" || tag === "@action") {
+					if (tag === "@bold" || tag === "@b" || tag === "@italic" || tag === "@i" || tag === "@note" || tag === "@skill" || tag === "@action") {
 						switch (tag) {
 							case "@b":
 							case "@bold":
@@ -573,6 +573,11 @@ function EntryRenderer () {
 							case "@i":
 							case "@italic":
 								textStack.push(`<i>`);
+								self.recursiveEntryRender(text, textStack, depth);
+								textStack.push(`</i>`);
+								break;
+							case "@note":
+								textStack.push(`<i class="text-muted">`);
 								self.recursiveEntryRender(text, textStack, depth);
 								textStack.push(`</i>`);
 								break;
@@ -1498,21 +1503,7 @@ EntryRenderer.monster = {
 	getLegendaryActionIntro: (mon) => {
 		const legendaryActions = mon.legendaryActions || 3;
 		const legendaryName = mon.name.split(",");
-		return `${legendaryName[0]} can take ${legendaryActions} legendary action${legendaryActions > 1 ? "s" : ""}, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. ${legendaryName[0]} regains spent legendary actions at the start of its turn.`
-	},
-
-	// ultimately these rollers should become part of the JSON
-	legacy: {
-		attemptToGetTitle: (ele) => {
-			let titleMaybe = $(ele.parentElement).find(".entry-title")[0];
-			if (titleMaybe !== undefined) {
-				titleMaybe = titleMaybe.innerHTML;
-				if (titleMaybe) {
-					titleMaybe = titleMaybe.substring(0, titleMaybe.length - 1).trim();
-				}
-			}
-			return titleMaybe;
-		}
+		return `${mon.isNamedCreature ? "" : "The "}${legendaryName[0]} can take ${legendaryActions} legendary action${legendaryActions > 1 ? "s" : ""}, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. ${mon.isNamedCreature ? "" : "The "}${legendaryName[0]} regains spent legendary actions at the start of its turn.`
 	},
 
 	getCompactRenderedString: (mon, renderer) => {
@@ -1689,6 +1680,24 @@ EntryRenderer.monster = {
 			trait = trait ? trait.concat(spellTraits) : spellTraits;
 		}
 		if (trait) return trait.sort((a, b) => SortUtil.monTraitSort(a.name, b.name));
+	},
+
+	getSkillsString (mon) {
+		function doSortMapJoinSkillKeys (obj, keys, joinWithOr) {
+			const toJoin = keys.sort(SortUtil.ascSort).map(s => `${s.uppercaseFirst()} ${obj[s]}`);
+			return joinWithOr ? CollectionUtil.joinConjunct(toJoin, ", ", ", or ") : toJoin.join(", ")
+		}
+
+		const skills = doSortMapJoinSkillKeys(mon.skill, Object.keys(mon.skill).filter(k => k !== "other"));
+		if (mon.skill.other) {
+			const others = mon.skill.other.map(it => {
+				if (it.oneOf) {
+					return `plus one of the following: ${doSortMapJoinSkillKeys(it.oneOf, Object.keys(it.oneOf), true)}`
+				}
+				throw new Error(`Unhandled monster "other" skill properties!`)
+			});
+			return `${skills}, ${others.join(", ")}`
+		} else return skills;
 	}
 };
 
@@ -1764,6 +1773,18 @@ EntryRenderer.item = {
 	_builtList: null,
 	_propertyList: {},
 	_typeList: {},
+	_addProperty (p) {
+		EntryRenderer.item._propertyList[p.abbreviation] = p.name ? JSON.parse(JSON.stringify(p)) : {
+			"name": p.entries[0].name.toLowerCase(),
+			"entries": p.entries
+		};
+	},
+	_addType (t) {
+		EntryRenderer.item._typeList[t.abbreviation] = t.name ? JSON.parse(JSON.stringify(t)) : {
+			"name": t.entries[0].name.toLowerCase(),
+			"entries": t.entries
+		};
+	},
 	/**
 	 * Runs callback with itemList as argument
 	 * @param callback
@@ -1791,21 +1812,9 @@ EntryRenderer.item = {
 
 		function addVariants (basicItemData) {
 			basicItemList = basicItemData.basicitem;
-			const itemPropertyList = basicItemData.itemProperty;
-			const itemTypeList = basicItemData.itemType;
 			// Convert the property and type list JSONs into look-ups, i.e. use the abbreviation as a JSON property name
-			for (let i = 0; i < itemPropertyList.length; i++) {
-				EntryRenderer.item._propertyList[itemPropertyList[i].abbreviation] = itemPropertyList[i].name ? JSON.parse(JSON.stringify(itemPropertyList[i])) : {
-					"name": itemPropertyList[i].entries[0].name.toLowerCase(),
-					"entries": itemPropertyList[i].entries
-				};
-			}
-			for (let i = 0; i < itemTypeList.length; i++) {
-				EntryRenderer.item._typeList[itemTypeList[i].abbreviation] = itemTypeList[i].name ? JSON.parse(JSON.stringify(itemTypeList[i])) : {
-					"name": itemTypeList[i].entries[0].name.toLowerCase(),
-					"entries": itemTypeList[i].entries
-				};
-			}
+			basicItemData.itemProperty.forEach(p => EntryRenderer.item._addProperty(p));
+			basicItemData.itemType.forEach(t => EntryRenderer.item._addType(t));
 			DataUtil.loadJSON(magicVariantUrl, mergeBasicItems);
 		}
 
@@ -2572,11 +2581,11 @@ EntryRenderer.dice = {
 		return typeof window !== "undefined" && typeof window.crypto !== "undefined";
 	},
 
-	randomise: (max) => {
+	randomise: (max, min = 1) => {
 		if (EntryRenderer.dice.isCrypto()) {
-			return EntryRenderer.dice._randomise(1, max + 1);
+			return EntryRenderer.dice._randomise(min, max + min);
 		} else {
-			return RollerUtil.roll(max) + 1;
+			return RollerUtil.roll(max) + min;
 		}
 	},
 
